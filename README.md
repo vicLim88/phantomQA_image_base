@@ -1,4 +1,10 @@
 # PhantomQA BASE Image
+Traditional automation tools are hardcoded. With the advent of the artificial intelligence, it is time to introduce our first ever digital robot, PhantomQA. Just like our physical humans, it will be able to serve as your digital administrative assistant, performing autonomous tasks and interaction with the respective OS that you are working on.
+
+How this will work is, it harnesses the power of Nvidia tech stack to enable the above work.
+
+## Vision
+A generic, multi-platform agent that can be extended into OS-specific Phantom Agents.
 
 ## File Structure
 ```
