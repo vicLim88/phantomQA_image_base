@@ -4,7 +4,26 @@ Traditional automation tools are hardcoded. With the advent of the artificial in
 How this will work is, it harnesses the power of Nvidia tech stack to enable the above work.
 
 ## Vision
-A generic, multi-platform agent that can be extended into OS-specific Phantom Agents.
+A cross-platform agent that can:    <br>
+🔹 Perceive desktop UI elements     <br>
+🔹 Interact with them autonomously  <br>
+🔹 Execute commands and validations <br>
+🔹 Report feedback                  <br>
+
+## Technical Capability
+### OS Interaction Support
+Currently, PhantomQA is able to interact with the following OS: <br>
+🪟 windows  <br>
+🐧 linux    <br>
+🍎 mac      <br>
+
+### Capability Description
+👀 Element Detection	Visual detection of UI elements (OCR, image matching, accessibility tree)   <br>
+🖱️ Interaction Control	Simulate mouse, keyboard, window focus, drag-drop                            <br>
+🧠 Context Awareness	Understand current app, window title, UI flow                               <br>
+🪟 Cross-Platform	Must run on Ubuntu, Windows, macOS                                              <br>
+🔄 Feedback Loop	Capture state after action to re-plan next steps                                <br>
+📦 Deployable as container or service	Users can run it locally or orchestrate via K8s later       <br>
 
 ## File Structure
 ```
