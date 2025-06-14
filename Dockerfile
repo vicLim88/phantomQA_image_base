@@ -2,10 +2,15 @@
 FROM nvcr.io/nvidia/pytorch:25.05-py3
 
 # Ensure bash and basic tools
-RUN apt update && apt install -y \
-    wget curl git unzip nano \
-    libgl1 libglib2.0-0 \
-    python3-pip
+RUN apt-get update && apt-get install -y \
+    libgl1          \
+    libglib2.0-0    \
+    ffmpeg          \
+    x11-utils       \
+    xdotool         \
+    wmctrl          \
+    curl            \
+    && rm -rf /var/lib/apt/lists/*
 
 # Optional: Set working dir
 WORKDIR /app
@@ -13,9 +18,14 @@ WORKDIR /app
 # Copy project files
 COPY . /app
 
-# Install dependencies
-RUN pip install --upgrade pip && \
-    pip install -r requirements.txt
+# Install Python dependencies
+RUN pip install --no-cache-dir --upgrade pip \
+ && pip install --no-cache-dir -r requirements.txt
+
+# Create non-root user
+RUN useradd -m phantomqa \
+ && chown -R phantomqa:phantomqa /app
+USER phantomqa
 
 # Default command
 CMD ["bash", "run.sh"]
