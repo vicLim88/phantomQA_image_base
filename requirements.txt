@@ -1,0 +1,13 @@
+# Core
+torch
+transformers
+pillow
+opencv-python
+numpy
+
+# Optional: NeMo-related
+nemo_toolkit[all]
+
+# Vision/Detection
+ultralytics  # for YOLOv8 (custom visual fallback)
+paddleocr
