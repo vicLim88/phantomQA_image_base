@@ -1,13 +1,16 @@
 # Core
+numpy
+opencv-python-headless
+Pillow
 torch
 transformers
-pillow
-opencv-python
-numpy
 
-# Optional: NeMo-related
+# NVIDIA NeMo
 nemo_toolkit[all]
 
 # Vision/Detection
-ultralytics  # for YOLOv8 (custom visual fallback)
+mss
 paddleocr
+paddlepaddle-gpu
+pyautogui
+ultralytics
